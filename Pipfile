@@ -9,6 +9,7 @@ pytest = "*"
 pytest-cov = "*"
 
 [packages]
+django = "*"
 
 [requires]
 python_version = "3.8"
