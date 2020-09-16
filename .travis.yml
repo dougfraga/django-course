@@ -10,7 +10,7 @@ env:
     - PIPENV_IGNORE_VIRTUALENVS=1
 
 install:
-  - pip install -q pipenv codecov
+  - pip install -q pipenv
   - pipenv sync -d
 
 script:
