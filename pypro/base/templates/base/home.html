@@ -10,7 +10,7 @@
 
     <meta name="description" content="Python Pro webpage">
     <meta name="author" content="Doug Fraga">
-
+	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 	<script src="{% static 'js/jquery.min.js' %}"></script>
@@ -33,40 +33,66 @@
   </div>
 </nav>
 
-    <div class="container-fluid">
+  <div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="jumbotron">
 				<h2>
-					Hello, world!
+					Curso de Python com Luciano Ramalho
 				</h2>
 				<p>
-					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-				</p>
-				<p>
-					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+					Confira em breve mais informações sobre o curso que será ministrado pelo autor do livro
+					<a href="https://novatec.com.br/livros/pythonfluente/" target="_blank">Python Fluente</a>.
 				</p>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card">
 						<h5 class="card-header">
-							Card title
+							Saiba mais sobre o instrutor
 						</h5>
 						<div class="card-body">
 							<p class="card-text">
-								Card content
+								<img src="{% static 'img/lucianoramalho.png' %}" alt="Foto de Luciano Ramalho"
+									 class="img-thumbnail float-left mr-3">
+								Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um
+								alcoolatra anonimis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!
+								Paisis, filhis, espiritis santis. Não sou faixa preta cumpadi, sou preto inteiris,
+								inteiris. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Suco de cevadiss,
+								é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. A ordem dos tratores não
+								altera o pão duris. Mé faiz elementum girarzis, nisi eros vermeio.
 							</p>
-						</div>
-						<div class="card-footer">
-							Card footer
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+  </div>
+
+  <footer class="main-footer mt-5 pt-4">
+	  <div class="container">
+		  <div class="row">
+			  <div class="col">
+				<h3>Entre em contato</h3>
+				  <address>
+					  +55 21 96926-8787
+					  <br/>
+					  <a href="mailto:douglas.fraga@gmail.com">douglas.fraga@gmail.com</a>
+				  </address>
+			  </div>
+		  </div>
+	  </div>
+	  <div class="rights pb-4">
+		  <div class="container">
+			  <div class="row">
+				  <div class="col">
+					{% now 'Y' %} Fraga Tech. Todos direitos reservados.
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+  </footer>
 
   </body>
 </html>
