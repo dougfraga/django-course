@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Python Pro - Appetizers{% endblock title %}
+{% block description %}Page with all videos{% endblock description %}
+{% block body %}
+  <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+            <h1 class="mt-4 mb-3">Appetizers Videos</h1>
+            <ol>
+                {% for video in videos %}
+                <li><a href="{{ video.get_absolute_url }}">{{ video.title | default:"No Title" }}</a></li>
+                {% empty %}
+                <li>Appetizer video not found</li>
+                {% endfor %}
+            </ol>
+
+		</div>
+	</div>
+  </div>
+{% endblock body%}
+
+

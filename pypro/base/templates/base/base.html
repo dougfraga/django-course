@@ -35,29 +35,7 @@
 
   {% block body %}{% endblock body%}
 
-  <footer class="main-footer mt-5 pt-4">
-	  <div class="container">
-		  <div class="row">
-			  <div class="col">
-				<h3>Entre em contato</h3>
-				  <address>
-					  +55 21 96926-8787
-					  <br/>
-					  <a href="mailto:douglas.fraga@gmail.com">douglas.fraga@gmail.com</a>
-				  </address>
-			  </div>
-		  </div>
-	  </div>
-	  <div class="rights pb-4">
-		  <div class="container">
-			  <div class="row">
-				  <div class="col">
-					{% now 'Y' %} Fraga Tech. Todos direitos reservados.
-				  </div>
-			  </div>
-		  </div>
-	  </div>
-  </footer>
+ {% include 'base/footer.html' with email_contact='douglas.fraga@gmail.com' only %}
 
   </body>
 </html>
