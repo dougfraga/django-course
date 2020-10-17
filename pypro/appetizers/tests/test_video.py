@@ -1,5 +1,6 @@
 import pytest
 from django.urls import reverse
+from model_mommy import mommy
 
 from pypro.appetizers.models import Video
 from pypro.django_assertions import assert_contains
@@ -7,9 +8,7 @@ from pypro.django_assertions import assert_contains
 
 @pytest.fixture
 def video(db):
-    v = Video(slug='motivation', title='Appetizer Video: Motivation', youtube_id='93J_ZDruRM4')
-    v.save()
-    return v
+    return mommy.make(Video)
 
 
 @pytest.fixture

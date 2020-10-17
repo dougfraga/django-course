@@ -9,6 +9,7 @@ pytest = "*"
 pytest-cov = "*"
 pytest-django = "*"
 codecov = "*"
+model-mommy = "*"
 
 [packages]
 django = "*"
