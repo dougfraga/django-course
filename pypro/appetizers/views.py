@@ -1,20 +1,10 @@
-from django.shortcuts import render
-from django.urls import reverse
+from django.shortcuts import render, get_object_or_404
 
-
-class Video:
-    def __init__(self, slug, title, youtube_id):
-        self.slug = slug
-        self.title = title
-        self.youtube_id = youtube_id
-
-    def get_absolute_url(self):
-        return reverse('appetizers:video', args=(self.slug,))
-
+from pypro.appetizers.models import Video
 
 videos = [
-    Video('motivation', 'Appetizer Video: Motivation', '93J_ZDruRM4'),
-    Video('piano', 'Piano sample', 'vhJNpOkJFkc')
+    Video(slug='motivation', title='Appetizer Video: Motivation', youtube_id='93J_ZDruRM4'),
+    Video(slug='piano', title='Piano sample', youtube_id='vhJNpOkJFkc')
 ]
 
 videos_dct = {v.slug: v for v in videos}
@@ -25,5 +15,5 @@ def index(request):
 
 
 def video(request, slug):
-    v = videos_dct[slug]
+    v = get_object_or_404(Video, slug=slug)
     return render(request, 'appetizers/video.html', context={'video': v})
