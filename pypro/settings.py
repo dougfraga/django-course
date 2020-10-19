@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pypro.base',
     'pypro.appetizers',
+    'pypro.modules',
 ]
 
 MIDDLEWARE = [

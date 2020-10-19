@@ -2,15 +2,9 @@ from django.shortcuts import render, get_object_or_404
 
 from pypro.appetizers.models import Video
 
-videos = [
-    Video(slug='motivation', title='Appetizer Video: Motivation', youtube_id='93J_ZDruRM4'),
-    Video(slug='piano', title='Piano sample', youtube_id='vhJNpOkJFkc')
-]
-
-videos_dct = {v.slug: v for v in videos}
-
 
 def index(request):
+    videos = Video.objects.order_by('creation').all()
     return render(request, 'appetizers/index.html', context={'videos': videos})
 
 
