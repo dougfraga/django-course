@@ -17,6 +17,6 @@ def resp(client, modules):
     return resp
 
 
-def test_email_link(resp, modules):
+def test_modules_title(resp, modules):
     for module in modules:
         assert_contains(resp, module.title)
