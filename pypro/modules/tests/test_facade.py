@@ -11,4 +11,4 @@ def modules(db):
 
 
 def test_list_sorted_modules(modules):
-    assert list(sorted(modules, key=lambda module: module.title)) == facade.list_sorted_modules()
+    assert list(sorted(modules, key=lambda module: module.order)) == facade.list_sorted_modules()
