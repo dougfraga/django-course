@@ -7,7 +7,7 @@ from pypro.modules.models import Module
 
 @pytest.fixture
 def modules(db):
-    return [mommy.make(Module, title=s) for s in 'before after'.split()]
+    return [mommy.make(Module, title=s) for s in 'antes depois'.split()]
 
 
 def test_list_sorted_modules(modules):

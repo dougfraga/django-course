@@ -8,4 +8,4 @@ def list_sorted_modules() -> List[Module]:
     List modules sorted by title
     :return
     """
-    return list(Module.objects.order_by('title').all())
+    return list(Module.objects.order_by('order').all())
