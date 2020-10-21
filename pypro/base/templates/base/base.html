@@ -34,7 +34,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           {% for module in MODULES %}
-          <a class="dropdown-item" href="#">{{module.title}}</a>
+          <a class="dropdown-item" href="{{module.get_absolute_url}}">{{module.title}}</a>
           <div class="dropdown-divider"></div>
           {% endfor %}
         </div>

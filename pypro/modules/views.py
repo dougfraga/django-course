@@ -1,3 +1,8 @@
-# from django.shortcuts import render
+from django.shortcuts import render
 
-# Create your views here.
+from pypro.modules import facade
+
+
+def detail(request, slug):
+    module = facade.find_module(slug)
+    return render(request, 'modules/module_detail.html', {'module': module})
