@@ -24,6 +24,7 @@ class Lesson(OrderedModel):
     slug = models.SlugField(unique=True)
     module = models.ForeignKey('Module', on_delete=models.PROTECT)
     order_with_respect_to = 'module'
+    youtube_id = models.CharField(max_length=32)
 
     class Meta(OrderedModel.Meta):
         pass

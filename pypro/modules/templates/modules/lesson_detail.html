@@ -1,13 +1,13 @@
 {% extends 'base/base.html' %}
 {% load static %}
-{% block title %}Python Pro - Appetizers{% endblock title %}
-{% block description %}Page with video sample{% endblock description %}
+{% block title %}Python Pro - Aulas{% endblock title %}
+{% block description %}Page with lesson details{% endblock description %}
 {% block body %}
   <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-            <h1 class="mt-4 mb-3">{{ video.title | default:"No Title" }}</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.youtube_id }}" frameborder="0"
+            <h1 class="mt-4 mb-3">{{ lesson.title }}</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ lesson.youtube_id }}" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
 		</div>
