@@ -10,6 +10,7 @@ def populate_slug(apps, schema_editor):
         module.slug = slugify(module.title)
         module.save()
 
+
 class Migration(migrations.Migration):
 
     dependencies = [
