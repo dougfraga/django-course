@@ -23,6 +23,8 @@ django-debug-toolbar = "*"
 sentry-sdk = "*"
 django-livesync = "*"
 django-ordered-model = "*"
+ipython = "*"
+django-extensions = "*"
 
 [requires]
 python_version = "3.8"
