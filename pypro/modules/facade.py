@@ -1,5 +1,7 @@
 from typing import List
 
+from django.db.models import Prefetch
+
 from pypro.modules.models import Module, Lesson
 
 
@@ -20,4 +22,11 @@ def list_sorted_module_lessons(module: Module):
 
 
 def find_lesson(slug):
-    return Lesson.objects.get(slug=slug)
+    return Lesson.objects.select_related('module').get(slug=slug)
+
+
+def list_modules_with_lessons():
+    sorted_lessons = Lesson.objects.order_by('order')
+    return Module.objects.order_by('order').prefetch_related(Prefetch(
+        'lesson_set', queryset=sorted_lessons, to_attr='lessons')
+    ).all()

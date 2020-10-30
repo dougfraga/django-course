@@ -28,3 +28,11 @@ def test_title(resp, lesson: Lesson):
 
 def test_video(resp, lesson: Lesson):
     assert_contains(resp, f'src="https://www.youtube.com/embed/{lesson.youtube_id}"')
+
+
+def test_module_breadcrumb_title(resp, module: Module):
+    assert_contains(resp, f'{module.title}</a></li>')
+
+
+def test_module_breadcrumb_url(resp, module: Module):
+    assert_contains(resp, f'<li class="breadcrumb-item"><a href="{module.get_absolute_url()}')
