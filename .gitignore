@@ -133,5 +133,4 @@ staticfiles/
 mediafiles/
 
 # pstgres files for local development
-
 .pgdata
