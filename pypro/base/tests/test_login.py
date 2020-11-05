@@ -60,9 +60,13 @@ def test_without_login_url(resp_with_logged_user):
     return assert_not_contains(resp_with_logged_user, reverse('login'))
 
 
-def test_with_logout_button(resp_with_logged_user):
+def test_logout_button_available(resp_with_logged_user):
     return assert_contains(resp_with_logged_user, 'Sair')
 
 
 def test_name_logged_user_available(resp_with_logged_user, logged_user):
     return assert_contains(resp_with_logged_user, logged_user.first_name)
+
+
+def test_logout_url_available(resp_with_logged_user):
+    return assert_contains(resp_with_logged_user, reverse('logout'))
