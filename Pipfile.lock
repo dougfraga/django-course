@@ -354,9 +354,9 @@
         },
         "watchdog": {
             "hashes": [
-                "sha256:4214e1379d128b0588021880ccaf40317ee156d4603ac388b9adcf29165e0c04"
+                "sha256:6deba694f7199464bfc0899ea408ec8c77a8be40f58a08b9845cf9ad6a39f6ca"
             ],
-            "version": "==0.10.3"
+            "version": "==1.0.0"
         },
         "wcwidth": {
             "hashes": [
