@@ -353,10 +353,8 @@
             "version": "==1.25.11"
         },
         "watchdog": {
-            "hashes": [
-                "sha256:4214e1379d128b0588021880ccaf40317ee156d4603ac388b9adcf29165e0c04"
-            ],
-            "version": "==0.10.3"
+            "hashes": [],
+            "version": "==2.3.1"
         },
         "wcwidth": {
             "hashes": [
