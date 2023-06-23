@@ -366,11 +366,8 @@
             "version": "==0.2.5"
         },
         "websocket-client": {
-            "hashes": [
-                "sha256:0fc45c961324d79c781bab301359d5a1b00b13ad1b10415a4780229ef71a5549",
-                "sha256:d735b91d6d1692a6a181f2a8c9e0238e5f6373356f561bb9dc4c7af36f452010"
-            ],
-            "version": "==0.57.0"
+            "hashes": [],
+            "version": "==1.6.1"
         }
     },
     "develop": {
